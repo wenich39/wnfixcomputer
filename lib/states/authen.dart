@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wenich/states/create_account.dart';
 import 'package:wenich/utility/my_constant.dart';
 import 'package:wenich/widgets/show_button.dart';
 import 'package:wenich/widgets/show_form.dart';
@@ -40,7 +41,14 @@ class Authen extends StatelessWidget {
                   const ShowText(text: ' Not Account ?'),
                   ShowTextButton(
                     label: 'Create Account',
-                    pressFunc: () {},
+                    pressFunc: () {
+                      print('You click Create Account');
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return const Createaccount();
+                        },
+                      ));
+                    },
                   )
                 ],
               )
